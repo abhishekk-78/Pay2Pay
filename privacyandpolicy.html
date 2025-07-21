@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pay2Pay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #4f46e5;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition: 0.4s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -5px rgba(37, 99, 235, 0.3);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Privacy Hero Section */
+        .privacy-hero {
+            padding: 180px 0 100px;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .privacy-hero::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .privacy-hero::after {
+            content: "";
+            position: absolute;
+            bottom: -200px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .privacy-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .privacy-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Privacy Content */
+        .privacy-content {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: 30px;
+        }
+
+        .privacy-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(0deg);
+            transition: var(--transition);
+            flex: 1;
+        }
+
+        .privacy-section:hover {
+            transform: perspective(1000px) rotateX(3deg);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .privacy-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .privacy-section:hover::before {
+            width: 8px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .privacy-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+
+        .privacy-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .privacy-section ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 10px;
+            color: var(--gray);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .privacy-section li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .privacy-section .highlight {
+            background: rgba(37, 99, 235, 0.05);
+            border-left: 3px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .terms-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            position: relative;
+        }
+
+        .privacy-nav {
+            position: sticky;
+            top: 120px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 40px;
+            z-index: 100;
+            min-width: 260px;
+            height: fit-content;
+            transition: all 0.4s ease;
+        }
+
+        .privacy-nav h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .privacy-nav h3 i {
+            display: none;
+            cursor: pointer;
+        }
+
+        .privacy-nav-links {
+            list-style: none;
+        }
+
+        .privacy-nav-links li {
+            margin-bottom: 12px;
+        }
+
+        .privacy-nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .privacy-nav-links a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .privacy-nav-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .privacy-nav-links a:hover::before {
+            opacity: 1;
+        }
+
+        .privacy-nav-links a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .privacy-nav-links a.active::before {
+            opacity: 1;
+        }
+
+        /* Mobile Navigation Button */
+        .mobile-nav-toggle {
+            display: none;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .mobile-nav-toggle i {
+            transition: transform 0.3s ease;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .terms-container {
+                grid-template-columns: 1fr;
+            }
+            .privacy-container {
+                flex-direction: column;
+            }
+            
+            .privacy-nav {
+                position: relative;
+                top: 0;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: white;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .privacy-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .privacy-section {
+                padding: 25px;
+            }
+            
+            .mobile-nav-toggle {
+                display: flex;
+            }
+
+            /* Mobile Navigation Panel */
+            .privacy-nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 80px);
+                border-radius: 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                pointer-events: none;
+                transition: transform 0.4s ease, opacity 0.3s ease;
+                z-index: 900;
+                overflow-y: auto;
+                padding: 20px;
+                box-shadow: none;
+            }
+
+            .privacy-nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            .privacy-nav h3 {
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .privacy-nav h3 i {
+                display: block;
+            }
+
+            .privacy-nav-links a {
+                padding: 10px 0 10px 25px;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+            
+            .logo img {
+                height: 26px;
+            }
+            
+            .privacy-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .privacy-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .privacy-content {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logopay2pay.jpeg" alt="Pay2Pay Logo">
+                Pay2Pay
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus_pay2pay.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html#download">Download App</a></li>
+            </ul>
+            
+            <button class="cta-button">
+                <a href="https://www.pay2paymoney.in/" style="color: inherit; text-decoration: none;">Get Started</a>
+            </button>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Privacy Hero Section -->
+    <section class="privacy-hero">
+        <div class="container">
+            <div class="privacy-hero-content">
+                <h1>Privacy Policy</h1>
+                <p>Last Updated: July 20, 2025 | Effective Date: July 20, 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content">
+        <div class="container">
+            <button class="mobile-nav-toggle">
+                <span>Table of Contents</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+             <div class="terms-container">
+            <div class="privacy-nav">
+                <h3>Quick Navigation <i class="fas fa-times close-nav"></i></h3>
+                <ul class="privacy-nav-links">
+                    <li><a href="#introduction" class="active">1. Introduction</a></li>
+                    <li><a href="#collection">2. Information Collection</a></li>
+                    <li><a href="#use">3. Use of Information</a></li>
+                    <li><a href="#sharing">4. Sharing of Information</a></li>
+                    <li><a href="#security">5. Data Security</a></li>
+                    <li><a href="#rights">6. Your Rights</a></li>
+                    <li><a href="#cookies">7. Cookies & Tracking</a></li>
+                    <li><a href="#children">8. Children's Privacy</a></li>
+                    <li><a href="#changes">9. Policy Changes</a></li>
+                    <li><a href="#contact">10. Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="privacy-container">
+                <div class="privacy-section-container">
+                    <!-- Section 1: Introduction -->
+                    <div id="introduction" class="privacy-section fade-in">
+                        <h2>1. Introduction</h2>
+                        <p>Pay2Pay Money Care Wallet Service ("Pay2Pay", "we", "us", or "our") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application, website, and related services (collectively, the "Services").</p>
+                        
+                        <div class="highlight">
+                            <p>By using our Services, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not access or use our Services.</p>
+                        </div>
+                        
+                        <p>This policy applies to information we collect through our Services and in electronic communications between you and Pay2Pay. It does not apply to information collected by third parties, including through any application or content that may link to or be accessible from our Services.</p>
+                    </div>
+
+                    <!-- Section 2: Information Collection -->
+                    <div id="collection" class="privacy-section fade-in">
+                        <h2>2. Information Collection</h2>
+                        <h3>2.1 Personal Information</h3>
+                        <p>We collect personal information that you voluntarily provide when you register for an account, use our Services, or communicate with us. This may include:</p>
+                        <ul>
+                            <li>Full name, date of birth, and contact information</li>
+                            <li>Government-issued identification details</li>
+                            <li>Financial information (bank account details, transaction history)</li>
+                            <li>Authentication credentials (passwords, PINs)</li>
+                            <li>Contact preferences and communication records</li>
+                        </ul>
+                        
+                        <h3>2.2 Usage Information</h3>
+                        <p>We automatically collect certain information when you use our Services, including:</p>
+                        <ul>
+                            <li>Device information (model, operating system, unique identifiers)</li>
+                            <li>IP address, browser type, and internet service provider</li>
+                            <li>Usage patterns, preferences, and transaction history</li>
+                            <li>Location information (if enabled on your device)</li>
+                        </ul>
+                        
+                        <h3>2.3 Cookies and Tracking Technologies</h3>
+                        <p>We use cookies, web beacons, and similar technologies to collect information about your interactions with our Services. These technologies help us:</p>
+                        <ul>
+                            <li>Personalize your experience</li>
+                            <li>Analyze service usage</li>
+                            <li>Prevent fraudulent activities</li>
+                            <li>Improve security measures</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3: Use of Information -->
+                    <div id="use" class="privacy-section fade-in">
+                        <h2>3. Use of Information</h2>
+                        <p>We use the information we collect for various business purposes, including:</p>
+                        
+                        <h3>3.1 Service Provision</h3>
+                        <ul>
+                            <li>Create and manage your account</li>
+                            <li>Process transactions and authenticate payments</li>
+                            <li>Provide customer support and respond to inquiries</li>
+                            <li>Enable account features and functionality</li>
+                        </ul>
+                        
+                        <h3>3.2 Security and Compliance</h3>
+                        <ul>
+                            <li>Verify your identity and prevent fraud</li>
+                            <li>Comply with legal and regulatory requirements</li>
+                            <li>Protect against security threats and illegal activities</li>
+                            <li>Enforce our terms of service and policies</li>
+                        </ul>
+                        
+                        <h3>3.3 Service Improvement</h3>
+                        <ul>
+                            <li>Analyze usage patterns to enhance our Services</li>
+                            <li>Develop new features and products</li>
+                            <li>Conduct research and analysis</li>
+                            <li>Personalize content and recommendations</li>
+                        </ul>
+                        
+                        <h3>3.4 Communication</h3>
+                        <ul>
+                            <li>Send service-related announcements</li>
+                            <li>Provide transaction notifications</li>
+                            <li>Respond to your inquiries and requests</li>
+                            <li>Deliver marketing communications (with your consent)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 4: Sharing of Information -->
+                    <div id="sharing" class="privacy-section fade-in">
+                        <h2>4. Sharing of Information</h2>
+                        <p>We may share your information in the following circumstances:</p>
+                        
+                        <h3>4.1 With Service Providers</h3>
+                        <p>We share information with third-party service providers who perform services on our behalf, such as:</p>
+                        <ul>
+                            <li>Payment processing and financial institutions</li>
+                            <li>Fraud prevention and identity verification services</li>
+                            <li>Cloud storage and infrastructure providers</li>
+                            <li>Customer support and communication services</li>
+                        </ul>
+                        
+                        <h3>4.2 For Legal Compliance</h3>
+                        <p>We may disclose your information when required by law or to:</p>
+                        <ul>
+                            <li>Comply with legal processes or governmental requests</li>
+                            <li>Protect against legal liability</li>
+                            <li>Prevent or investigate possible wrongdoing</li>
+                            <li>Protect the security of our Services</li>
+                        </ul>
+                        
+                        <h3>4.3 Business Transfers</h3>
+                        <p>In the event of a merger, acquisition, reorganization, bankruptcy, or sale of assets, your information may be transferred as part of the transaction.</p>
+                        
+                        <h3>4.4 With Your Consent</h3>
+                        <p>We may share your information with third parties when we have your explicit consent to do so.</p>
+                    </div>
+
+                    <!-- Section 5: Data Security -->
+                    <div id="security" class="privacy-section fade-in">
+                        <h2>5. Data Security</h2>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
+                        
+                        <h3>5.1 Security Measures</h3>
+                        <ul>
+                            <li>Advanced encryption of data in transit and at rest</li>
+                            <li>Multi-factor authentication for account access</li>
+                            <li>Regular security audits and vulnerability testing</li>
+                            <li>Restricted access to personal information</li>
+                        </ul>
+                        
+                        <h3>5.2 Data Retention</h3>
+                        <p>We retain your personal information only for as long as necessary to:</p>
+                        <ul>
+                            <li>Provide you with our Services</li>
+                            <li>Comply with legal obligations</li>
+                            <li>Resolve disputes</li>
+                            <li>Enforce our agreements</li>
+                        </ul>
+                        <p>When we no longer need your information, we will securely delete or anonymize it.</p>
+                        
+                        <h3>5.3 Your Responsibilities</h3>
+                        <p>While we implement robust security measures, you also play a role in protecting your information:</p>
+                        <ul>
+                            <li>Choose a strong password and keep it confidential</li>
+                            <li>Enable two-factor authentication</li>
+                            <li>Log out of your account after each session</li>
+                            <li>Notify us immediately of any unauthorized access</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 6: Your Rights -->
+                    <div id="rights" class="privacy-section fade-in">
+                        <h2>6. Your Rights</h2>
+                        <p>Depending on your jurisdiction, you may have certain rights regarding your personal information:</p>
+                        
+                        <h3>6.1 Access and Correction</h3>
+                        <p>You have the right to access and update your personal information through your account settings. If you need assistance, you can contact our support team.</p>
+                        
+                        <h3>6.2 Data Portability</h3>
+                        <p>You may request a copy of your personal information in a structured, commonly used, and machine-readable format.</p>
+                        
+                        <h3>6.3 Deletion</h3>
+                        <p>You can request deletion of your personal information, subject to our legal obligations to retain certain data.</p>
+                        
+                        <h3>6.4 Opt-Out</h3>
+                        <p>You can opt-out of marketing communications at any time by using the unsubscribe link in our emails or through your account settings.</p>
+                        
+                        <h3>6.5 Withdraw Consent</h3>
+                        <p>Where we rely on your consent to process personal information, you have the right to withdraw that consent at any time.</p>
+                        
+                        <div class="highlight">
+                            <p>To exercise any of these rights, please contact us using the information provided in Section 10. We may need to verify your identity before processing your request.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 7: Cookies & Tracking -->
+                    <div id="cookies" class="privacy-section fade-in">
+                        <h2>7. Cookies & Tracking Technologies</h2>
+                        <p>We use various technologies to collect information about your use of our Services:</p>
+                        
+                        <h3>7.1 Types of Cookies</h3>
+                        <ul>
+                            <li><strong>Essential Cookies:</strong> Necessary for core functionality</li>
+                            <li><strong>Performance Cookies:</strong> Collect information about usage patterns</li>
+                            <li><strong>Functional Cookies:</strong> Remember your preferences</li>
+                            <li><strong>Advertising Cookies:</strong> Deliver personalized ads</li>
+                        </ul>
+                        
+                        <h3>7.2 Managing Cookies</h3>
+                        <p>You can control cookies through your browser settings:</p>
+                        <ul>
+                            <li>Most browsers allow you to block or delete cookies</li>
+                            <li>You can usually disable cookies for specific sites</li>
+                            <li>Mobile devices may have additional privacy controls</li>
+                        </ul>
+                        <p>Note that disabling cookies may affect your ability to use certain features of our Services.</p>
+                        
+                        <h3>7.3 Do Not Track Signals</h3>
+                        <p>We do not currently respond to "Do Not Track" signals from browsers. We will update this policy if a standard for responding to such signals is established.</p>
+                    </div>
+
+                    <!-- Section 8: Children's Privacy -->
+                    <div id="children" class="privacy-section fade-in">
+                        <h2>8. Children's Privacy</h2>
+                        <p>Our Services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children under 18.</p>
+                        
+                        <div class="highlight">
+                            <p>If we become aware that we have collected personal information from a child under 18 without parental consent, we will take steps to delete that information. If you believe we might have information from or about a child under 18, please contact us immediately.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 9: Policy Changes -->
+                    <div id="changes" class="privacy-section fade-in">
+                        <h2>9. Policy Changes</h2>
+                        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technologies, legal requirements, and other factors.</p>
+                        
+                        <h3>9.1 Notification of Changes</h3>
+                        <p>When we make material changes, we will notify you through:</p>
+                        <ul>
+                            <li>Email to your registered address</li>
+                            <li>In-app notifications</li>
+                            <li>Posting a notice on our website</li>
+                        </ul>
+                        <p>We will indicate the effective date of the revised policy at the top of this page.</p>
+                        
+                        <h3>9.2 Continued Use</h3>
+                        <p>Your continued use of our Services after the effective date of any revised Privacy Policy constitutes your acceptance of the changes.</p>
+                    </div>
+
+                    <!-- Section 10: Contact Us -->
+                    <div id="contact" class="privacy-section fade-in">
+                        <h2>10. Contact Us</h2>
+                        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                        
+                        <div class="highlight">
+                            <p><strong>Email:</strong> privacy@pay2pay.com<br>
+                            <strong>Address:</strong> office no -5116, 5th floor, b wing, bldg no -2, Bhandup industrial estate, pannalal compound, l.b.s marg, Bhandup west, Mumbai, Maharashtra 400078<br>
+                            <strong>Phone:</strong> +91 123-4567</p>
+                        </div>
+                        
+                        <p>For data protection inquiries, you can contact our Data Protection Officer at dpo@pay2pay.com.</p>
+                    </div>
+                </div>
+            </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="logopay2pay-removebg - Copy.png" alt="Pay2Pay Logo">
+                        <h3>Pay2Pay</h3>
+                    </div>
+                    <p>Secure mobile payments for everyone. Send, receive, and manage your money with ease.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="aboutus_pay2pay.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Other Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="contactus.html">Start a Journey With Pay2Pay</a></li>
+                         <li><a href="privacyandpolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Refund & Cancellation Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> office no -5116,5th floor ,b wing, bldg no -2, Bhandup industrial estate,pannalal compound,l.b.s marg, Bhandup west</li>
+                        <li><i class="fas fa-phone"></i> +91 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> support@Pay2Pay.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pay2Pay Money Care Wallet Service. All rights reserved. | <a href="termsandconditions.html" style="color: #94a3b8; text-decoration: underline;">Terms of Service</a> | <a href="privacy-policy.html" style="color: #94a3b8; text-decoration: underline;">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.querySelector('i').classList.toggle('fa-bars');
+            mobileMenu.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Sticky Header
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        // Scroll Animation for Privacy Sections
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        
+        fadeElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.remove('fa-times');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                }
+                
+                // Close navigation panel on mobile
+                if (window.innerWidth <= 768) {
+                    privacyNav.classList.remove('active');
+                    mobileNavToggle.querySelector('i').classList.remove('fa-chevron-up');
+                    mobileNavToggle.querySelector('i').classList.add('fa-chevron-down');
+                }
+                
+                // Scroll to target
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active navigation link
+                    document.querySelectorAll('.privacy-nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Highlight current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.privacy-section');
+            const navLinks = document.querySelectorAll('.privacy-nav-links a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Add hover effect to privacy sections
+        const privacySections = document.querySelectorAll('.privacy-section');
+        privacySections.forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transform = 'perspective(1000px) rotateX(3deg)';
+                section.style.boxShadow = '0 20px 30px rgba(0, 0, 0, 0.15)';
+            });
+            
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'perspective(1000px) rotateX(0deg)';
+                section.style.boxShadow = 'var(--shadow)';
+            });
+        });
+        
+        // Mobile navigation toggle
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const privacyNav = document.querySelector('.privacy-nav');
+        const closeNavBtn = document.querySelector('.close-nav');
+        
+        if (mobileNavToggle) {
+            mobileNavToggle.addEventListener('click', () => {
+                privacyNav.classList.toggle('active');
+                const icon = mobileNavToggle.querySelector('i');
+                
+                if (privacyNav.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        }
+        
+        // Close navigation panel
+        if (closeNavBtn) {
+            closeNavBtn.addEventListener('click', () => {
+                privacyNav.classList.remove('active');
+                mobileNavToggle.querySelector('i').classList.remove('fa-chevron-up');
+                mobileNavToggle.querySelector('i').classList.add('fa-chevron-down');
+            });
+        }
+        
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (privacyNav && privacyNav.classList.contains('active') && 
+                !privacyNav.contains(e.target) && 
+                !mobileNavToggle.contains(e.target)) {
+                privacyNav.classList.remove('active');
+                const icon = mobileNavToggle.querySelector('i');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+        
+        // Close nav when clicking on a link (mobile)
+        document.querySelectorAll('.privacy-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    privacyNav.classList.remove('active');
+                    mobileNavToggle.querySelector('i').classList.remove('fa-chevron-up');
+                    mobileNavToggle.querySelector('i').classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Auto-close nav when scrolling on mobile
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 768 && privacyNav.classList.contains('active')) {
+                privacyNav.classList.remove('active');
+                mobileNavToggle.querySelector('i').classList.remove('fa-chevron-up');
+                mobileNavToggle.querySelector('i').classList.add('fa-chevron-down');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Pay2Pay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #4f46e5;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+
+        .header-scrolled {
+            padding: 10px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            transition: 0.4s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px -5px rgba(37, 99, 235, 0.3);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Terms Hero Section */
+        .terms-hero {
+            padding: 180px 0 100px;
+            background: var(--gradient);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .terms-hero::before {
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .terms-hero::after {
+            content: "";
+            position: absolute;
+            bottom: -200px;
+            left: -100px;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .terms-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terms-hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .terms-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+            opacity: 0;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .terms-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            position: relative;
+        }
+
+        .terms-nav {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .terms-nav h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .terms-nav-links {
+            list-style: none;
+        }
+
+        .terms-nav-links li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .terms-nav-links li::before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .terms-nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            display: block;
+            padding: 8px 0;
+        }
+
+        .terms-nav-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .terms-nav-links a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .terms-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(0deg);
+            transition: var(--transition);
+        }
+
+        .terms-section:hover {
+            transform: perspective(1000px) rotateX(3deg);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .terms-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .terms-section:hover::before {
+            width: 8px;
+        }
+
+        .terms-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .terms-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        .terms-section h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+
+        .terms-section p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+
+        .terms-section ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        .terms-section li {
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+
+        .terms-section .highlight {
+            background: rgba(37, 99, 235, 0.05);
+            border-left: 3px solid var(--primary);
+            padding: 15px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Mobile Navigation Button */
+        .mobile-nav-toggle {
+            display: none;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .mobile-nav-toggle i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .terms-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .terms-nav {
+                position: relative;
+                top: 0;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background: white;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .terms-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .terms-section {
+                padding: 25px;
+            }
+            
+            .mobile-nav-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 20px;
+            }
+            
+            .logo img {
+                height: 26px;
+            }
+            
+            .terms-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .terms-hero {
+                padding: 150px 0 80px;
+            }
+            
+            .terms-content {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logopay2pay.jpeg" alt="Pay2Pay Logo">
+                Pay2Pay
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="aboutus_pay2pay.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="index.html#download">Download App</a></li>
+            </ul>
+            
+            <button class="cta-button">
+                <a href="https://www.pay2paymoney.in/" style="color: inherit; text-decoration: none;">Get Started</a>
+            </button>
+            
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Terms Hero Section -->
+    <section class="terms-hero">
+        <div class="container">
+            <div class="terms-hero-content">
+                <h1>Terms and Conditions</h1>
+                <p>Last Updated: July 20, 2025 | Effective Date: July 20, 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="terms-content">
+        <div class="container">
+            <button class="mobile-nav-toggle">
+                <span>Table of Contents</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            
+            <div class="terms-container">
+                <div class="terms-nav">
+                    <h3>Quick Navigation</h3>
+                    <ul class="terms-nav-links">
+                        <li><a href="#introduction" class="active">1. Introduction</a></li>
+                        <li><a href="#definitions">2. Definitions</a></li>
+                        <li><a href="#account">3. Account Registration</a></li>
+                        <li><a href="#services">4. Services</a></li>
+                        <li><a href="#fees">5. Fees and Charges</a></li>
+                        <li><a href="#liabilities">6. Liabilities</a></li>
+                        <li><a href="#privacy">7. Privacy and Data</a></li>
+                        <li><a href="#intellectual">8. Intellectual Property</a></li>
+                        <li><a href="#termination">9. Termination</a></li>
+                        <li><a href="#disputes">10. Dispute Resolution</a></li>
+                        <li><a href="#amendments">11. Amendments</a></li>
+                        <li><a href="#governing">12. Governing Law</a></li>
+                    </ul>
+                </div>
+
+                <div class="terms-sections">
+                    <!-- Section 1: Introduction -->
+                    <div id="introduction" class="terms-section fade-in">
+                        <h2>1. Introduction</h2>
+                        <p>Welcome to Pay2Pay Money Care Wallet Service ("Pay2Pay", "we", "us", or "our"). These Terms and Conditions ("Terms") govern your use of our services, including our mobile application, website, and any related services (collectively, the "Services").</p>
+                        
+                        <div class="highlight">
+                            <p>By accessing or using our Services, you agree to be bound by these Terms and all applicable laws and regulations. If you do not agree with any part of these Terms, you may not use our Services.</p>
+                        </div>
+                        
+                        <p>These Terms constitute a legal agreement between you and Pay2Pay. We may update these Terms from time to time, and the updated version will be effective when posted on our website or application.</p>
+                    </div>
+
+                    <!-- Section 2: Definitions -->
+                    <div id="definitions" class="terms-section fade-in">
+                        <h2>2. Definitions</h2>
+                        <p>For the purposes of these Terms:</p>
+                        <ul>
+                            <li><strong>"Account"</strong> means your Pay2Pay wallet account.</li>
+                            <li><strong>"App"</strong> means the Pay2Pay mobile application.</li>
+                            <li><strong>"User", "you", "your"</strong> means the individual or entity using our Services.</li>
+                            <li><strong>"Services"</strong> includes all payment processing, money transfer, and related financial services offered by Pay2Pay.</li>
+                            <li><strong>"Transaction"</strong> means any payment, transfer, or financial operation performed through our Services.</li>
+                            <li><strong>"KYC"</strong> means Know Your Customer procedures required for identity verification.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3: Account Registration -->
+                    <div id="account" class="terms-section fade-in">
+                        <h2>3. Account Registration</h2>
+                        <h3>3.1 Eligibility</h3>
+                        <p>To use our Services, you must:</p>
+                        <ul>
+                            <li>Be at least 18 years old</li>
+                            <li>Have legal capacity to enter into binding contracts</li>
+                            <li>Reside in a country where our Services are available</li>
+                            <li>Complete our KYC verification process</li>
+                        </ul>
+                        
+                        <h3>3.2 Account Creation</h3>
+                        <p>To create an account, you must provide accurate and complete information including:</p>
+                        <ul>
+                            <li>Full legal name</li>
+                            <li>Valid email address</li>
+                            <li>Mobile phone number</li>
+                            <li>Government-issued ID for verification</li>
+                        </ul>
+                        
+                        <h3>3.3 Account Security</h3>
+                        <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You must immediately notify us of any unauthorized use of your account.</p>
+                    </div>
+
+                    <!-- Section 4: Services -->
+                    <div id="services" class="terms-section fade-in">
+                        <h2>4. Services</h2>
+                        <h3>4.1 Wallet Services</h3>
+                        <p>Pay2Pay provides an electronic wallet service that allows you to:</p>
+                        <ul>
+                            <li>Store funds electronically</li>
+                            <li>Send and receive money domestically and internationally</li>
+                            <li>Pay bills and merchants</li>
+                            <li>Withdraw funds to linked bank accounts</li>
+                        </ul>
+                        
+                        <h3>4.2 Transaction Limits</h3>
+                        <p>We may impose transaction limits based on:</p>
+                        <ul>
+                            <li>Your account verification level</li>
+                            <li>Regulatory requirements</li>
+                            <li>Risk management considerations</li>
+                        </ul>
+                        <p>These limits may change at our discretion and will be communicated to you through our App or website.</p>
+                        
+                        <h3>4.3 Transaction Processing</h3>
+                        <p>Transactions are typically processed within:</p>
+                        <ul>
+                            <li>1 business day for domestic transfers</li>
+                            <li>1-3 business days for international transfers</li>
+                        </ul>
+                        <p>We are not responsible for delays caused by third parties such as banks or payment networks.</p>
+                    </div>
+
+                    <!-- Section 5: Fees and Charges -->
+                    <div id="fees" class="terms-section fade-in">
+                        <h2>5. Fees and Charges</h2>
+                        <h3>5.1 Service Fees</h3>
+                        <p>We may charge fees for certain Services, including:</p>
+                        <ul>
+                            <li>Money transfers (domestic and international)</li>
+                            <li>Currency conversion</li>
+                            <li>Expedited processing</li>
+                            <li>ATM withdrawals</li>
+                        </ul>
+                        
+                        <h3>5.2 Fee Disclosure</h3>
+                        <p>All applicable fees will be clearly disclosed to you before you confirm any transaction. You authorize us to deduct fees directly from your wallet balance.</p>
+                        
+                        <h3>5.3 Changes to Fees</h3>
+                        <p>We may change our fee structure at any time with 30 days' notice. Continued use of our Services after such notice constitutes acceptance of the new fees.</p>
+                    </div>
+
+                    <!-- Section 6: Liabilities -->
+                    <div id="liabilities" class="terms-section fade-in">
+                        <h2>6. Liabilities</h2>
+                        <h3>6.1 Our Liability</h3>
+                        <p>We are not liable for:</p>
+                        <ul>
+                            <li>Indirect, incidental, or consequential damages</li>
+                            <li>Loss of profits, revenue, or data</li>
+                            <li>Errors or delays caused by third parties</li>
+                            <li>Unauthorized transactions resulting from your failure to secure your account</li>
+                        </ul>
+                        
+                        <h3>6.2 Your Liability</h3>
+                        <p>You are responsible for:</p>
+                        <ul>
+                            <li>All transactions initiated from your account</li>
+                            <li>Ensuring sufficient funds are available</li>
+                            <li>Providing accurate recipient information</li>
+                            <li>Complying with all applicable laws and regulations</li>
+                        </ul>
+                        
+                        <h3>6.3 Transaction Errors</h3>
+                        <p>If you believe an error has occurred in a transaction, you must notify us within 30 days. We will investigate and resolve the matter as required by applicable laws.</p>
+                    </div>
+
+                    <!-- Section 7: Privacy and Data -->
+                    <div id="privacy" class="terms-section fade-in">
+                        <h2>7. Privacy and Data</h2>
+                        <h3>7.1 Data Collection</h3>
+                        <p>We collect personal and financial information as described in our Privacy Policy. This includes:</p>
+                        <ul>
+                            <li>Identification information</li>
+                            <li>Transaction history</li>
+                            <li>Device information</li>
+                            <li>Location data</li>
+                        </ul>
+                        
+                        <h3>7.2 Data Use</h3>
+                        <p>We use your data to:</p>
+                        <ul>
+                            <li>Provide and improve our Services</li>
+                            <li>Comply with legal obligations</li>
+                            <li>Prevent fraud and financial crimes</li>
+                            <li>Personalize your experience</li>
+                        </ul>
+                        
+                        <h3>7.3 Data Sharing</h3>
+                        <p>We may share your information with:</p>
+                        <ul>
+                            <li>Regulatory authorities as required by law</li>
+                            <li>Banks and payment processors to facilitate transactions</li>
+                            <li>Service providers who assist in our operations</li>
+                            <li>In connection with business transfers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 8: Intellectual Property -->
+                    <div id="intellectual" class="terms-section fade-in">
+                        <h2>8. Intellectual Property</h2>
+                        <p>All intellectual property rights in our Services, including trademarks, logos, and software, are owned by or licensed to Pay2Pay. You are granted a limited, non-exclusive, non-transferable license to use our Services for personal, non-commercial purposes.</p>
+                        <p>You may not:</p>
+                        <ul>
+                            <li>Reverse engineer, decompile, or disassemble any part of our Services</li>
+                            <li>Use our trademarks without express written permission</li>
+                            <li>Create derivative works based on our Services</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 9: Termination -->
+                    <div id="termination" class="terms-section fade-in">
+                        <h2>9. Termination</h2>
+                        <h3>9.1 By You</h3>
+                        <p>You may close your account at any time by contacting customer support. Any remaining balance will be transferred to your linked bank account within 30 days.</p>
+                        
+                        <h3>9.2 By Us</h3>
+                        <p>We may suspend or terminate your account if:</p>
+                        <ul>
+                            <li>You violate these Terms</li>
+                            <li>We suspect fraudulent or illegal activity</li>
+                            <li>Required by law or regulatory authorities</li>
+                            <li>You become insolvent or declare bankruptcy</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 10: Dispute Resolution -->
+                    <div id="disputes" class="terms-section fade-in">
+                        <h2>10. Dispute Resolution</h2>
+                        <h3>10.1 Informal Resolution</h3>
+                        <p>Before initiating formal proceedings, you agree to attempt to resolve disputes informally by contacting our customer support team.</p>
+                        
+                        <h3>10.2 Arbitration</h3>
+                        <p>Any dispute arising from these Terms will be resolved through binding arbitration in Mumbai, India under the rules of the Indian Council of Arbitration.</p>
+                        
+                        <h3>10.3 Class Action Waiver</h3>
+                        <p>You agree to resolve disputes on an individual basis and waive any right to participate in class actions or class arbitrations.</p>
+                    </div>
+
+                    <!-- Section 11: Amendments -->
+                    <div id="amendments" class="terms-section fade-in">
+                        <h2>11. Amendments</h2>
+                        <p>We may amend these Terms at any time. We will notify you of material changes at least 30 days before they take effect through:</p>
+                        <ul>
+                            <li>Email to your registered address</li>
+                            <li>In-app notifications</li>
+                            <li>Posting on our website</li>
+                        </ul>
+                        <p>Your continued use of our Services after the effective date of the amended Terms constitutes acceptance of the changes.</p>
+                    </div>
+
+                    <!-- Section 12: Governing Law -->
+                    <div id="governing" class="terms-section fade-in">
+                        <h2>12. Governing Law</h2>
+                        <p>These Terms are governed by and construed in accordance with the laws of India, without regard to its conflict of laws principles. The courts in Mumbai, India will have exclusive jurisdiction over any disputes arising from these Terms.</p>
+                        
+                        <div class="highlight">
+                            <p>For questions about these Terms, please contact us at:</p>
+                            <p>Email: legal@pay2pay.com<br>
+                            Address: office no -5116,5th floor ,b wing, bldg no -2, Bhandup industrial estate,pannalal compound,l.b.s marg, Bhandup west</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="logopay2pay-removebg - Copy.png" alt="Pay2Pay Logo">
+                        <h3>Pay2Pay</h3>
+                    </div>
+                    <p>Secure mobile payments for everyone. Send, receive, and manage your money with ease.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="aboutus_pay2pay.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Other Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="contactus.html">Start a Journey With Pay2Pay</a></li>
+                         <li><a href="privacyandpolicy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Refund & Cancellation Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i>office no -5116,5th floor ,b wing, bldg no -2, Bhandup industrial estate,pannalal compound,l.b.s marg, Bhandup west</li>
+                        <li><i class="fas fa-phone"></i> +91 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> support@Pay2Pay.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+         <p> Copyright &copy; 2025, Pay2Pay Money Care Pvt Ltd. All Rights Reserved.</p> 
+         </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.querySelector('i').classList.toggle('fa-bars');
+            mobileMenu.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Sticky Header
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        // Scroll Animation for Terms Sections
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const appearOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        
+        fadeElements.forEach(element => {
+            appearOnScroll.observe(element);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenu.querySelector('i').classList.remove('fa-times');
+                    mobileMenu.querySelector('i').classList.add('fa-bars');
+                }
+                
+                // Scroll to target
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current section in navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.terms-section');
+            const navLinks = document.querySelectorAll('.terms-nav-links a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Add hover effect to terms sections
+        const termsSections = document.querySelectorAll('.terms-section');
+        termsSections.forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                section.style.transform = 'perspective(1000px) rotateX(3deg)';
+                section.style.boxShadow = '0 20px 30px rgba(0, 0, 0, 0.15)';
+            });
+            
+            section.addEventListener('mouseleave', () => {
+                section.style.transform = 'perspective(1000px) rotateX(0deg)';
+                section.style.boxShadow = 'var(--shadow)';
+            });
+        });
+        
+        // Mobile navigation toggle
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const termsNav = document.querySelector('.terms-nav');
+        
+        if (mobileNavToggle) {
+            mobileNavToggle.addEventListener('click', () => {
+                termsNav.classList.toggle('active');
+                const icon = mobileNavToggle.querySelector('i');
+                
+                if (termsNav.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        }
+        
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', (e) => {
+            if (termsNav && termsNav.classList.contains('active') && 
+                !termsNav.contains(e.target) && 
+                !mobileNavToggle.contains(e.target)) {
+                termsNav.classList.remove('active');
+                const icon = mobileNavToggle.querySelector('i');
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    </script>
+</body>
+</html>
